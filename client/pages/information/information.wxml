@@ -1,0 +1,46 @@
+<!--host.wxml-->
+<view class="information">
+  <view class="info-timeTable">
+    <view class="info-timeTable-box">
+      <view class="infor-timeTable-box-title">
+        今日课表
+      </view>
+      <view class="infor-timeTable-box-line"></view>
+      <view class="infor-timeTable-box-content">
+        <view class="infor-timeTable-box-content-part" wx:for="{{classTable}}">
+          <view class="timeTable-box-content-part-name">{{item.name}}</view>
+          <view class="timeTable-box-content-part-content">
+            <view wx:for="{{item.class}}">
+              {{item.time}} {{item.content}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="info-query">
+    <navigator url="../../pages/attendQuery/attendQuery">
+      <view class="info-query-content" style="margin-bottom: 41rpx;">
+          <text>考勤查询</text>
+      </view>
+    </navigator>
+    <view style="margin-bottom: 41rpx;">
+      <block  wx:for="{{queryGrade}}"> 
+        <navigator url="{{item.goto}}">
+          <view class="info-query-content">
+            <text>{{item.name}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <view style="margin-bottom: 41rpx;">
+      <block  wx:for="{{queryClass}}"> 
+        <navigator url="{{item.goto}}">
+          <view class="info-query-content">
+            <text>{{item.name}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

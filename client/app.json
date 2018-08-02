@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/information/information",
+
+    "pages/attendQuery/attendQuery",
+    "pages/appeal/appeal",
+
+    "pages/cet46Query/cet46Query",
+
+    "pages/gradeQuery/gradeQuery",
+
+    "pages/ncreQuery/ncreQuery",
+
+    "pages/classQuery/classQuery",
+    "pages/checkClass/checkClass",
+    "pages/addClass/addClass",
+
+    "pages/index/index",
+    "pages/addCgi/addCgi"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5DADE2",
+    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#BDC3C7",
+    "selectedColor": "#3498DB",
+    "borderStyle": "#C2C2C2",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "selectedIconPath": "assets/images/information/information1.png",
+        "iconPath": "assets/images/information/information.png",
+        "pagePath": "pages/information/information",
+        "text": "教务"
+      },
+      {
+        "selectedIconPath": "assets/images/information/book1.png",
+        "iconPath": "assets/images/information/book.png",
+        "pagePath": "pages/index/index",
+        "text": "图书"
+      },
+      {
+        "selectedIconPath": "assets/images/information/active1.png",
+        "iconPath": "assets/images/information/active.png",
+        "pagePath": "pages/index/index",
+        "text": "活动"
+      },
+      {
+        "selectedIconPath": "assets/images/information/user1.png",
+        "iconPath": "assets/images/information/user.png",
+        "pagePath": "pages/index/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

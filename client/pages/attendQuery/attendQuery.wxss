@@ -1,0 +1,87 @@
+page {
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*查询参数*/
+.attend_query-parameter {
+	margin: 54rpx 30rpx 50rpx 30rpx;
+}
+.attend_query-parameter-part {
+	display: flex;
+	font-size: 30rpx;
+	align-items: center;
+	margin-bottom: 45rpx;
+	justify-content: space-between;
+}
+.attend_query-parameter-part image {
+	width: 36rpx;
+	height: 36rpx;
+}
+.attend_query-parameter-part button {
+	height: 80rpx;
+	width: 260rpx;
+	display: flex;
+	color: #5DADE2;
+	font-size: 30rpx;
+	/*font-weight: bold;*/
+	align-items: center;
+	border-radius: 50rpx;
+	letter-spacing: 2rpx;
+	box-sizing: border-box;
+	justify-content: center;
+	background-color: white;
+	border: 5rpx solid #5DADE2;
+	box-shadow: 0 0 20rpx #B7B7B7;
+}
+.attend_query-parameter-part-class {
+	margin-right: 0;
+	width: 600rpx !important;
+}
+
+/*查询统计图*/
+.attend_query-chart {
+	margin: 0 40rpx 40rpx 40rpx;
+}
+
+/*查询结果*/
+.attend_query-result {
+	width: calc(100% - 60rpx);
+	height: 340rpx;
+	margin: 0 30rpx 40rpx 30rpx;
+	overflow: hidden;
+	padding: 40rpx 30rpx;
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 20rpx;
+	box-shadow: 0rpx 4rpx 20rpx grey;
+}
+.attend_query-result-box {
+	height: 400rpx;
+	width: 100%;
+	height: 260rpx;
+	overflow: scroll;
+}
+.attend_query-result-box-data {
+	height: 40rpx;
+	display: flex;
+	margin-bottom: 13rpx;
+	align-items: center;
+	justify-content: space-between;
+}
+.attend_query-result-box-data text {
+	font-size: 26rpx;
+}
+.result-box-data-appeal {
+	width: 80rpx;
+	height: 40rpx;
+	display: flex;
+	color: white;
+	/*visibility: hidden;*/
+	align-items: center;
+	border-radius: 20rpx;
+	justify-content: center;
+	background-color: #EE3E32;
+}

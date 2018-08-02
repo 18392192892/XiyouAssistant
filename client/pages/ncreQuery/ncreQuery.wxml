@@ -1,0 +1,62 @@
+<view class="ncre_query">
+	<view class="ncre_query-img">
+		<image src="../../assets/images/cet46Query/clip.png"></image>
+	</view>
+	<view 
+		class="ncre_query-main{{isResult === true ? ' ncre_query-main_ok' : ''}}{{isLoading === true ? ' ncre_query-main_loading' : ''}}">
+		<view class="ncre_query-main-box ncre_query-main-form{{isResult === true ? ' ncre_query-main-form_ok' : ''}}">
+			<view class="ncre_query-main-form-input" wx:for="{{pickerArray}}">
+				<image src="{{item.icon}}"></image>
+				<picker
+					mode = "selector" 
+					range="{{item.showList}}">
+					<view>
+						{{item.show}}
+					</view>
+				</picker>
+			</view>
+			<view class="ncre_query-main-form-input" wx:for="{{inputArray}}">
+				<image src="{{item.icon}}"></image>
+				<input 
+					style="font-size: 30rpx;"
+					placeholder="{{item.placeholder}}" 
+					placeholder-style="font-size: 30rpx; color: #B3B3B3;"
+					type="text" />
+			</view>
+			<view class="ncre_query-main-form-vercode">
+				<input type="text" />
+				<view>
+					
+				</view>
+			</view>
+			<view class="ncre_query-main-form-button">
+				<view class="query_animation{{isLoading === true ? ' query_animation_loading' : ''}}"></view>
+				<view 
+					bindtap="_doQuery"
+					class="ncre_query-main-form-button-do{{isLoading === true ? ' ncre_query-main-form-button-do_loading' : ''}}">
+					查询
+				</view>
+			</view>
+		</view>
+		<view class="ncre_query-main-box ncre_query-main-result{{isResult === true ? ' ncre_query-main-result_ok' : ''}}">
+			<view class="ncre_query-main-result-title">
+				<text>
+					16一级计算机基础及MSOffice应用
+				</text>
+			</view>
+			<view class="ncre_query-main-result-show">
+				<view class="ncre_query-main-result-show-item">
+					<text>考试状态：</text>
+					<text style="color: black;">{{result}}</text>
+				</view>
+				<view class="ncre_query-main-result-show-item">
+					<text>证书编号：</text>
+					<text style="color: black;">{{certificateID}}</text>
+				</view>
+			</view>
+			<view class="ncre_query-main-result-back" bindtap="_backQuery">
+				<text>返回</text>
+			</view>
+		</view>
+	</view>
+</view>

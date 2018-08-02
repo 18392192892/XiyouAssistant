@@ -1,0 +1,57 @@
+<view class="attend_query">
+	<view class="attend_query-parameter">
+		<view class="attend_query-parameter-part">
+			<image src="../../assets/images/attendQuery/time.png"></image>
+			<picker 
+				mode = "date" 
+				style="margin: 0 auto 0 52rpx;"
+				bindchange="_changeStartTime"
+				end="{{startLimitTime}}">
+				<button>
+					{{showStartTime}}
+				</button>
+			</picker>
+			<text>至</text>
+			<picker 
+				mode = "date"  
+				style="margin: 0 0 0 auto;"
+				bindchange="_changeEndTime"
+				start="{{endLimitTime}}">
+				<button>
+					{{showEndTime}}
+				</button>
+			</picker>
+		</view>
+		<view class="attend_query-parameter-part">
+			<image src="../../assets/images/attendQuery/class.png"></image>
+			<picker 
+				mode = "selector" 
+				range="{{classList}}">		
+				<button class="attend_query-parameter-part-class">
+					{{className}}
+				</button>
+			</picker>	
+		</view>
+	</view>
+	<view class="attend_query-chart">
+		<chart-component></chart-component>
+	</view>
+	<!-- <text>dddsss</text> -->
+	<view class="attend_query-result">
+		<view class="attend_query-result-box">
+			<view class="attend_query-result-box-data" wx:for="{{queryResult}}">
+				<text>{{item.day}}</text> 
+				<text>{{item.weekday}}</text> 
+				<text>{{item.time}}</text>  
+				<text>{{item.place}}</text> 
+				<text style="color: {{item.color}}">{{item.attend}}</text>
+				<navigator
+					url="../appeal/appeal"
+					hover-class="none"
+					style="visibility: {{item.show}}">
+					<text class="result-box-data-appeal">申诉</text>
+				</navigator> 
+			</view>
+		</view>
+	</view>
+</view>

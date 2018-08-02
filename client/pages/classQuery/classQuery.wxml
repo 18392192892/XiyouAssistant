@@ -1,0 +1,72 @@
+<view class="mask" wx:if="{{showSetDate}}"></view>
+
+<view class="class_query">
+	<view class="class_query-header">
+		<view style="width: 100rpx; height: 20rpx;"></view>
+		<view class="class_query-header-time">
+			<text style="font-size: 34rpx; margin-bottom: 10rpx;">第1周</text>
+			<text space="emsp">大一 第2学期</text>
+		</view>
+		<view 
+			class="class_query-header-add {{showSetDate === true ? 'class_query-show-set-button' : ''}}" 
+			bindtap="_setDate">
+			<image src="../../assets/images/classQuery/add.png" />
+		</view>
+	</view>
+	<view class="class_query-set {{showSetDate === true ? 'class_query-show-set-date' : ''}}">
+		<view class="class_query-set-box">
+			<picker
+				range="{{termList}}">
+				<view class="class_query-set-box-selector">
+					<text style="font-size: 36rpx;">当前学期</text>
+					<view>
+						<text style="font-size: 30rpx; color: #808080; margin-right: 20rpx;">{{termChoice}}</text>
+						<image src="../../assets/images/classQuery/rightArrow.png" />
+					</view>
+				</view>
+			</picker>
+			<picker
+				range="{{weekList}}">
+				<view class="class_query-set-box-selector">
+					<text style="font-size: 36rpx;">当前周数</text>
+					<view>
+						<text style="font-size: 30rpx; color: #808080; margin-right: 20rpx;">{{weekChoice}}</text>
+						<image src="../../assets/images/classQuery/rightArrow.png" />
+					</view>
+				</view>
+			</picker>
+			<navigator 
+				url="../addClass/addClass"
+				hover-class="none">
+				<view class="class_query-set-box-button">
+					手动添加课程
+				</view>
+			</navigator>
+		</view>
+	</view>
+	<view class="class_query-main">
+		<view class="class_query-main-date">
+			<view class="class_query-main-data-box" style="width: 60rpx; background-color: #6BC2FD;">
+				<text>7</text>
+				<text>月</text>
+			</view>
+			<view class="class_query-main-data-box" wx:for="{{date}}">
+				<text>{{item.weekday}}</text>
+				<text>{{item.day}}日</text>
+			</view>
+		</view>
+		<view class="class_query-main-class" wx:for="{{classNumber}}">
+			<view class="class_query-main-class-number">
+				{{item}}
+			</view>
+			<view class="class_query-main-class-info" wx:for="{{weeknum}}">
+				<view style="background-color: #B2EDCE; width: 100%; height: 100%; border-radius: 16rpx;">
+					<navigator 
+						url="../checkClass/checkClass"
+						hover-class="none" 
+						style="height: 100%;"></navigator>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,9 @@
+
+.attend_query-chart-canvas {
+	width: 670rpx;
+	height: 480rpx;
+}
+.attend_query-chart-canvas canvas {
+	width: 670rpx;
+	height: 480rpx;
+}

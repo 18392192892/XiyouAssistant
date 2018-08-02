@@ -1,0 +1,39 @@
+<view class="grade_query">
+	<view class="grade_query-head">
+		<view class="grade_query-head-term">
+			2017-2018 第一学期
+		</view>
+	</view>
+	<view class="grade_query-main">
+		<view class="grade_query-main-title">
+			<text style="flex-grow: 3">课程</text>
+			<text style="flex-grow: 2">类型/学分</text>
+			<text style="flex-grow: 2">平时/试卷</text>
+			<text style="flex-grow: 2">总分</text>
+			<text style="flex-grow: 1">绩点</text>
+		</view>
+		<view class="grade_query-main-info">
+			<view class="grade_query-main-info-item" wx:for="{{gradeList}}">
+				<text class="grade_query-main-info-item-name">{{item.name}}</text>
+				<text class="grade_query-main-info-item-type" style="margin-left: 40rpx;">{{item.type}}</text>
+				<text style="margin-left: 20rpx;">{{item.score}}</text>
+				<text style="margin-left: 80rpx;">{{item.dailyScore}}</text>
+				<text style="margin-left: 30rpx;">{{item.paperScore}}</text>
+				<text style="margin-left: 80rpx;">{{item.allScore}}</text>
+				<text style="margin-left: 60rpx;">{{item.point}}</text>
+			</view>
+			<view class="grade_query-main-info-average">
+					<text>平均成绩：{{averagePoints}}</text>
+					<text>总成绩：{{allPoints}}</text>
+			</view>
+			<view class="grade_query-main-info-all_grade">
+				<view class="grade_query-main-info-all_grade-box" wx:for="{{allGradeList}}">
+					<text style="font-size: 36rpx; color: #3498DB;">{{item.name}}</text>
+					<text>学分共需：{{item.need}}</text>
+					<text>所获学分：{{item.gets}}</text>
+					<text>未通过学分：{{item.lose}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

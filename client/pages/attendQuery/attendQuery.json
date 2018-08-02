@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "考勤查询",
+    "usingComponents": {
+	    "chart-component": "../../components/attendQuery/chart-component/chart-component"
+	  }
+}

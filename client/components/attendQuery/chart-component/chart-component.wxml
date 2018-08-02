@@ -1,0 +1,4 @@
+<!--host.wxml-->
+<view class="attend_query-chart-canvas">
+  <canvas canvas-id="chartCanvas"></canvas>
+</view>

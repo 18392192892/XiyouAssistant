@@ -1,0 +1,14 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx69f191f020aa07b9",
+	"projectname": "XiyouAssistant",
+	"condition": {}
+}

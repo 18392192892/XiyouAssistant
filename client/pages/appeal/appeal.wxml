@@ -1,0 +1,20 @@
+<view class="appeal">
+	<view class="appeal-main">
+		<view class="appeal-main-item">
+			<text>C语言程序设计</text>
+		</view>
+		<view class="appeal-main-item">
+			<text>7-12 1-2节</text>
+		</view>
+		<view class="appeal-main-reason">
+			<text>申诉原因：</text>
+			<view class="appeal-main-reason-input">
+				<textarea
+					placeholder="请输入申诉原因" />
+			</view>
+		</view>
+	</view>
+	<View class="appeal-button">
+		<text>确认申诉</text>
+	</View>
+</view>

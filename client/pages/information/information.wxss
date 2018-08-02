@@ -1,0 +1,83 @@
+page {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+/*.info-head-title {
+    height: 88rpx;
+    padding: 26rpx;
+    text-align: center;
+    font-size: 36rpx;
+    line-height: 36rpx;
+    box-sizing: border-box;
+}*/
+/*课程表*/
+.info-timeTable {
+    width: 100%;
+    color: white;
+    padding: 35rpx 25rpx;
+    box-sizing: border-box;
+}
+.info-timeTable-box {
+    width: 700rpx;
+    overflow: hidden;
+    border-radius: 20rpx;
+    background-color: #5DADE2;
+}
+.infor-timeTable-box-title {
+    display: flex;
+    margin: 27rpx 0;
+    font-size: 38rpx;
+    justify-content: center;
+}
+.infor-timeTable-box-line {
+    width: 560rpx;
+    margin: 0 70rpx;
+    border-top: 1px solid white;
+}
+.infor-timeTable-box-content {
+    font-size: 28rpx;
+    margin: 25rpx 95rpx;
+}
+.infor-timeTable-box-content-part {
+    display: flex;
+}
+.timeTable-box-content-part-name {
+    display: inline-block;
+}
+.timeTable-box-content-part-content {
+    margin-left: 25rpx;
+}
+.timeTable-box-content-part-content view {
+    overflow: hidden;
+    max-width: 400rpx;
+    white-space: nowrap;
+    margin-bottom: 25rpx;
+    letter-spacing: 2rpx;
+    text-overflow: ellipsis;
+}
+/*查询*/
+.info-query {
+    width: 100%;
+}
+.info-query-content {
+    width: calc(100% - 98rpx);
+    display: flex;
+    padding: 35rpx 0;
+    font-size: 30rpx;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-top: 1rpx solid #CFCFCF;
+    border-bottom: 1rpx solid #CFCFCF;
+    margin: -1rpx 45rpx 0rpx 53rpx;
+}
+.info-query-content::after {
+    content: "";
+    width: 14rpx;
+    height: 14rpx;
+    transform: rotate(45deg);
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
+}

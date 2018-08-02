@@ -1,0 +1,16 @@
+<view class="check_class">
+	<view class="check_class-info">
+		<view class="check_class-info-box">
+			<view class="check_class-info-box-title">
+				<text>{{classTitle}}</text>
+			</view>
+			<view class="check_class-info-box-detail">
+				<view class="check_class-info-box-detail-item" wx:for="{{infoList}}">
+					<image src="{{item.icon}}" />
+					<text style="color: #808080; margin-right: 30rpx;">{{item.name}}</text>
+					<text>{{item.result}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

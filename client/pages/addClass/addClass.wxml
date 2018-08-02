@@ -1,0 +1,46 @@
+<view class="add_class">
+	<view class="add_class-name">
+		<view class="add_class-name-box">
+			<text>课名</text>
+			<input 
+				type="text" 
+				placeholder="请输入课名字"
+				placeholder-style="color: #cccccc; text-indent: 4px;" />
+		</view>
+	</view>
+	<view class="add_class-info">
+		<view class="add_class-info-box">
+			<view class="add_class-info-box-item" wx:for="{{infoList}}">
+				<image src="{{item.icon}}" />
+				<view class="add_class-info-box-item-choice">
+					<text>{{item.name}}</text>
+					<view wx:if="{{item.name === '周数'}}">
+						<picker
+							range="{{item.pickList}}">
+							<text style="color: black; display: inline-block; width: 300rpx;">{{item.pickChoice}}</text>
+						</picker>
+					</view>
+					<view wx:elif="{{item.name === '节数'}}">
+						<picker
+							mode="multiSelector"
+							range="{{item.pickList}}">
+							<text style="color: black; display: inline-block; width: 300rpx;">{{item.pickChoice}}</text>
+						</picker>
+					</view>
+					<view wx:else>
+						<input 
+							type="text"
+							style="width: 300rpx;"
+							placeholder="{{item.placeholder}}"
+							placeholder-style="color: #cccccc; text-indent: 4px;" />
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="add_class-button">
+		<view class="add_class-button-box">
+			保存
+		</view>
+	</view>
+</view>
